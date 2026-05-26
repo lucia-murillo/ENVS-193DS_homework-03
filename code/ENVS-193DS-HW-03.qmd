@@ -1,0 +1,30 @@
+---
+title: "ENVS 193DS Homework 03"
+author: "Lucia Murillo"
+date: "2026-05-25"
+format: pdf
+editor: visual
+---
+
+```{r}
+#| label: setup
+# reading in packages 
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+# creating new object from kelp data  
+kelp <- read_csv("data/temp-kelp.csv")
+# creating new object from personal data 
+personal_data <- read_csv("data/personal-data.csv") |> 
+  # cleaning names of columns 
+  clean_names() |> 
+  # dropping N/A values 
+  drop_na(date)
+```
+
+# Problem 1: Giant Kelp fronds
+## (a) 
+
+One method of determining the strength of a relationship between temperature and giant kelp frond elongation is by finding the Pearson's correlation (r), which determines the direction and strength of the linear relationship between variables. The non parametric version is the Spearman rank correlation, which determines the monotonic relationship between variables. 
+
