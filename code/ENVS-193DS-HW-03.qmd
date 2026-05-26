@@ -52,3 +52,27 @@ ggplot(data = kelp,
   theme_minimal()
 ```
 
+**Do I need to check residuals?** 
+
+## (c) 
+### Checking assumptions:
+In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship. 
+
+### Running a test
+
+```{r}
+#| label: kelp-pearsons
+
+# correlation test 
+# variables: temperature + kelp elongation 
+cor.test(~ temp_c + kelp_elong,
+         # data from kelp dataframe 
+         data = kelp,
+         # pearson correlation 
+         method = "pearson")
+```
+ **Make sure outputs are visible** 
+ 
+
+
+
