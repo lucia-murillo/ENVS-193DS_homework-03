@@ -74,14 +74,85 @@ cor.test(~ temp_c + kelp_elong,
  **Make sure outputs are visible** 
 
 ## (d) 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a strong negative (Pearson's r = -0.69) relationship between ocean temperature and kelp elongation (p = 1.366e-05, \u03B1 = 0.05)
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.69, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. 
 
 ## (e) 
-I found that kelp elongation rates tend to decrease as temperatures increase. There is a strong negative relationship between these two variables (Pearson's r = -0.69, p = 1.366e-05, \u03B1 = 0.05). 
+I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.69, p = 1.366e-05, \u03B1 = 0.05). 
 **FINISH LATER** **ASK ABT DOING A LM** 
 
+## (f) 
+```{r}
+#| label: kelp-spearman
+# correlation test 
+# variables: temperature + kelp elongation 
+cor.test(~ temp_c + kelp_elong,
+         # data from kelp dataframe 
+         data = kelp,
+         # spearman correlation 
+         method = "spearman")
+```
+**make sure results are displayed** 
 
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans U+03C1 = 0.69, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. 
 
+# Problem 2: Personal Data
+
+## (a)
+
+```{r}
+#| label: personal-comparison-plot
+# ggplot base layer, data from personal_data 
+ggplot(data = personal_data,
+       # x-axis: location 
+       # y-axis: productivity rating 
+       mapping = aes(x = location,
+                     y = productivity_rating_1_5,
+                     # color by location 
+                     color = location)) +
+  # boxplot layer 2 
+  geom_boxplot() + 
+  # jitter plot layer 3 
+  geom_jitter(height = 0, width = 0.2) + 
+  # changing titles of axes, adding title 
+  labs(x = "Location",
+       y = "Productivity rating (1-5)",
+       title = "Productivity ratings vary by location") +
+  # adding minimal theme 
+  theme_minimal() + 
+  # changing colors of graph 
+  scale_color_manual(values = c(
+    "darkcyan", "deeppink", "darkorange", "royalblue", "purple", "navy", "maroon", "green3")) + 
+  # removing legend 
+  theme(legend.position = "none") 
+
+```
+
+**add subtitle, wrap x-axis labels?, take out grids and background** 
+
+```{r}
+#| label: personal-scatterplot
+# ggplot base layer, data is personal_data 
+ggplot(data = personal_data, 
+       # x-axis: time of start 
+       # y-axis: productivity rating 
+       mapping = aes(x = time_of_start,
+                     y = productivity_rating_1_5)) +
+  # add points
+  geom_point(
+    # change color and size of points
+    size = 3, color = "cyan3") + 
+  # adding labels to axes and adding title 
+  labs(x = "Time of start",
+       y = "Productivity rating (1-5)",
+       title = "Unclear relationship between time of day and productivity") + 
+  # apply minimal theme 
+  theme_minimal() + 
+  # remove legend
+  theme(legend.position = "none")
+
+```
+
+**add subtitle, change plot??, take out grid and background** 
 
 
 
