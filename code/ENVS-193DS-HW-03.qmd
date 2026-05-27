@@ -154,6 +154,12 @@ ggplot(data = personal_data,
 
 **add subtitle, change plot??, take out grid and background** 
 
+## (b) 
+
+**Figure 1: Comparison of productivity levels at different locations.** Each boxplot represents a location where I have studied, and each point represents a single study session. 
+
+**Figure 2: The relationship between studuing start time and productivity.** Each point represents a single study session. 
+**MAKE THAT ONE A LM??** 
 
 
 
