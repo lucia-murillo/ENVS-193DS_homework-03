@@ -4,6 +4,10 @@ author: "Lucia Murillo"
 date: "2026-05-25"
 format: pdf
 editor: visual
+toc: true
+execute:
+  message: false
+  warning:false
 ---
 
 ```{r}
@@ -14,9 +18,9 @@ library(here)
 library(janitor)
 library(readxl)
 # creating new object from kelp data  
-kelp <- read_csv("data/temp-kelp.csv")
+kelp <- read_csv((here::here ("data","temp-kelp.csv")))
 # creating new object from personal data 
-personal_data <- read_csv("data/personal-data.csv") |> 
+personal_data <- read_csv((here::here ("data","personal-data.csv"))) |> 
   # cleaning names of columns 
   clean_names() |> 
   # dropping N/A values 
@@ -169,6 +173,12 @@ ggplot(data = personal_data,
 ## (a) 
 The test I have selected is the Mann-Whitney U-test. The response variable is treefrog density and the predictor variables are urbanization and crayfish presence. There is not a figure or table that is associated with the Mann-Whitney test that I am focusing on.
 
+## (b)
+The test I am focusing on does not have a figure or a table. 
+```{r}
+#| label: stream-figure
+knitr::include_graphics((here::here ("data","stream-screenshot.png")))
+```
 
 
 
