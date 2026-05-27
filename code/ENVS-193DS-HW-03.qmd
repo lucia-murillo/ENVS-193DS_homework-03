@@ -141,6 +141,7 @@ ggplot(data = personal_data,
   geom_point(
     # change color and size of points
     size = 3, color = "cyan3") + 
+ #ADD  geom_line(col = "cyan3") +??
   # adding labels to axes and adding title 
   labs(x = "Time of start",
        y = "Productivity rating (1-5)",
@@ -160,6 +161,14 @@ ggplot(data = personal_data,
 
 **Figure 2: The relationship between studuing start time and productivity.** Each point represents a single study session. 
 **MAKE THAT ONE A LM??** 
+
+# Problem 3: Affective visualization 
+
+# Problem 4: Statistical critique 
+
+## (a) 
+The test I have selected is the Mann-Whitney U-test. The response variable is treefrog density and the predictor variables are urbanization and crayfish presence. There is not a figure or table that is associated with the Mann-Whitney test that I am focusing on.
+
 
 
 
