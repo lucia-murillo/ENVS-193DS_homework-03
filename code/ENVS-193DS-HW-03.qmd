@@ -48,7 +48,7 @@ ggplot(data = kelp,
        y = kelp_elong)) + 
   # first layer: scatterplot 
   # changing color to royal blue 
-  geom_point(col = "royalblue") + 
+  geom_point(col = "seagreen") + 
   # changing x and y axis titles, adding title 
   labs(x = "Temperature (\u00B0 C)",
        y = "Kelp elongation (cm/day)",
@@ -57,13 +57,11 @@ ggplot(data = kelp,
   theme_minimal()
 ```
 
-**Do I need to check residuals?**
-
 ## (c)
 
 ### Checking assumptions:
 
-In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship.
+In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship since linearity is an assumption of this test. The other assumptions are met since the data is continuous and we can assume that the observations are independent. 
 
 ### Running a test
 
@@ -79,15 +77,13 @@ cor.test(~ temp_c + kelp_elong,
          method = "pearson")
 ```
 
-**Make sure outputs are visible**
-
 ## (d)
 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.69, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation.
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation.
 
 ## (e)
 
-I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.69, p = 1.366e-05, \u03B1 = 0.05). **FINISH LATER** **ASK ABT DOING A LM**
+I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.687, p = 1.366e-05, \u03B1 = 0.05). In a time of rising temperatures worldwide, this is important to know as giant kelp is the base for many marine ecosystems.  
 
 ## (f)
 
@@ -102,14 +98,13 @@ cor.test(~ temp_c + kelp_elong,
          method = "spearman")
 ```
 
-These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans U+03C1 = 0.69, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation.
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation.
 
 # Problem 2: Personal Data
 
 ## (a)
 
 ```{r}
-#| label: personal-comparison-plot
 # ggplot base layer, data from personal_data 
 ggplot(data = personal_data,
        # x-axis: location 
@@ -133,6 +128,7 @@ ggplot(data = personal_data,
     "darkcyan", "deeppink", "darkorange", "royalblue", "purple", "navy", "maroon", "green3")) + 
   # removing legend 
   theme(legend.position = "none") 
+
 
 ```
 
@@ -172,15 +168,17 @@ ggplot(data = personal_data,
 
 # Problem 3: Affective visualization
 
-## (a) 
-One idea I had for an affective visualization of my data is making the time of day vs productivity graph be a gradient of time of day. The points could be stars on the nighttime end and little clouds or possibly butterflies or something similar on the day end. I would probably do this as a drawing either digitally or physically. 
+## (a)
+
+One idea I had for an affective visualization of my data is making the time of day vs productivity graph be a gradient of time of day. The points could be stars on the nighttime end and little clouds or possibly butterflies or something similar on the day end. I would probably do this as a drawing either digitally or physically.
 
 ## (b)
 
-## (c) 
+## (c)
 
-## (d) 
-This shows my the changes in my productivity when studying when I start studying at different times of day. I chose to make it themed like a gradient of times of day. Each point is represented by a star or a cloud. This draft is a drawing done with colored pencils and pens. I was inspired by the Dear Data project by Stefanie Posavec and Giorgia Lupi as well as Jill Pelto's artwork. 
+## (d)
+
+This shows my the changes in my productivity when studying when I start studying at different times of day. I chose to make it themed like a gradient of times of day. Each point is represented by a star or a cloud. This draft is a drawing done with colored pencils and pens. I was inspired by the Dear Data project by Stefanie Posavec and Giorgia Lupi as well as Jill Pelto's artwork.
 
 # Problem 4: Statistical critique
 
