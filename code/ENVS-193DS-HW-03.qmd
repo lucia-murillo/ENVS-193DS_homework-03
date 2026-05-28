@@ -181,11 +181,16 @@ One idea I had for an affective visualization of my data is to create a bar grap
 
 ## (b)
 
+
 ## (c)
+```{r}
+# adding photo
+knitr::include_graphics("data/3c.png")
+```
 
 ## (d)
 
-This shows my the changes in my productivity when studying when I start studying at different times of day. I chose to make it themed like a gradient of times of day. Each point is represented by a star or a cloud. This draft is a drawing done with colored pencils and pens. I was inspired by the Dear Data project by Stefanie Posavec and Giorgia Lupi as well as Jill Pelto's artwork.
+This shows my the changes in my productivity when studying when I am at different locations. I was inspired by the Dear Data project by Stefanie Posavec and Giorgia Lupi as well as Jill Pelto's artwork.
 
 # Problem 4: Statistical critique
 
