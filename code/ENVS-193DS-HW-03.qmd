@@ -7,7 +7,7 @@ editor: visual
 toc: true
 execute:
   message: false
-  warning:false
+  warning: false
 ---
 
 ```{r}
@@ -33,7 +33,8 @@ personal_data <- read_csv((here::here ("data","personal-data.csv"))) |>
 
 One method of determining the strength of a relationship between temperature and giant kelp frond elongation is by finding the Pearson's correlation (r), which determines the direction and strength of the linear relationship between variables. The non parametric version is the Spearman rank correlation, which determines the monotonic relationship between variables.
 
-## (b) 
+## (b)
+
 ```{r}
 #| label: kelp-scatterplot
 
@@ -56,11 +57,13 @@ ggplot(data = kelp,
   theme_minimal()
 ```
 
-**Do I need to check residuals?** 
+**Do I need to check residuals?**
 
-## (c) 
+## (c)
+
 ### Checking assumptions:
-In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship. 
+
+In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship.
 
 ### Running a test
 
@@ -75,16 +78,19 @@ cor.test(~ temp_c + kelp_elong,
          # pearson correlation 
          method = "pearson")
 ```
- **Make sure outputs are visible** 
 
-## (d) 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.69, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. 
+**Make sure outputs are visible**
 
-## (e) 
-I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.69, p = 1.366e-05, \u03B1 = 0.05). 
-**FINISH LATER** **ASK ABT DOING A LM** 
+## (d)
 
-## (f) 
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.69, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation.
+
+## (e)
+
+I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.69, p = 1.366e-05, \u03B1 = 0.05). **FINISH LATER** **ASK ABT DOING A LM**
+
+## (f)
+
 ```{r}
 #| label: kelp-spearman
 # correlation test 
@@ -95,9 +101,8 @@ cor.test(~ temp_c + kelp_elong,
          # spearman correlation 
          method = "spearman")
 ```
-**make sure results are displayed** 
 
-These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans U+03C1 = 0.69, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. 
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans U+03C1 = 0.69, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation.
 
 # Problem 2: Personal Data
 
@@ -131,7 +136,7 @@ ggplot(data = personal_data,
 
 ```
 
-**add subtitle, wrap x-axis labels?, take out grids and background** 
+**add subtitle, wrap x-axis labels?, take out grids and background**
 
 ```{r}
 #| label: personal-scatterplot
@@ -157,29 +162,37 @@ ggplot(data = personal_data,
 
 ```
 
-**add subtitle, change plot??, take out grid and background** 
+**add subtitle, change plot??, take out grid and background**
 
-## (b) 
+## (b)
 
-**Figure 1: Comparison of productivity levels at different locations.** Each boxplot represents a location where I have studied, and each point represents a single study session. 
+**Figure 1: Comparison of productivity levels at different locations.** Each boxplot represents a location where I have studied, and each point represents a single study session.
 
-**Figure 2: The relationship between studuing start time and productivity.** Each point represents a single study session. 
-**MAKE THAT ONE A LM??** 
+**Figure 2: The relationship between studuing start time and productivity.** Each point represents a single study session. **MAKE THAT ONE A LM??**
 
-# Problem 3: Affective visualization 
-
-# Problem 4: Statistical critique 
+# Problem 3: Affective visualization
 
 ## (a) 
+One idea I had for an affective visualization of my data is making the time of day vs productivity graph be a gradient of time of day. The points could be stars on the nighttime end and little clouds or possibly butterflies or something similar on the day end. I would probably do this as a drawing either digitally or physically. 
+
+## (b)
+
+## (c) 
+
+
+# Problem 4: Statistical critique
+
+## (a)
+
 The test I have selected is the Mann-Whitney U-test. The response variable is treefrog density and the predictor variables are urbanization and crayfish presence. There is not a figure or table that is associated with the Mann-Whitney test that I am focusing on.
 
 ## (b)
-The test I am focusing on does not have a figure or a table. 
+
+The test I am focusing on does not have a figure or a table.
+
 ```{r}
 #| label: stream-figure
 knitr::include_graphics((here::here ("data","stream-screenshot.png")))
 ```
 
-
-
-
+This table shows the macro invertebrate community indices in urban and natural streams in the Santa Monica Mountains and Simi Hills, CA in 2001. It displays rows such as taxonomic richness and percent EPT (aquatic insect orders Ephemeroptera, Plecoptera, and Trichoptera) invertebrates, and compares urban and natural streams. Data points marked with different superscripts identify significant differences between the two at different p-values, bonferroni comparison, and other\*\*.
