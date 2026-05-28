@@ -17,6 +17,7 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(readxl)
+library(scales)
 # creating new object from kelp data  
 kelp <- read_csv((here::here ("data","temp-kelp.csv")))
 # creating new object from personal data 
@@ -117,15 +118,20 @@ ggplot(data = personal_data,
   geom_boxplot() + 
   # jitter plot layer 3 
   geom_jitter(height = 0, width = 0.2) + 
-  # changing titles of axes, adding title 
+  # changing titles of axes, adding title and subtitle
   labs(x = "Location",
        y = "Productivity rating (1-5)",
-       title = "Productivity ratings vary by location") +
-  # adding minimal theme 
-  theme_minimal() + 
+       title = "Productivity ratings vary by location",
+       subtitle = "2026-05-28") +
+  # removing grid, making background blank  
+  theme( panel.background = element_blank(),
+    panel.grid = element_blank(),
+    axis.ticks = element_blank()) + 
   # changing colors of graph 
   scale_color_manual(values = c(
     "darkcyan", "deeppink", "darkorange", "royalblue", "purple", "navy", "maroon", "green3")) + 
+  # wrapping location titles to avoid overlap  
+    scale_x_discrete(labels = label_wrap(10)) +
   # removing legend 
   theme(legend.position = "none") 
 
@@ -146,31 +152,32 @@ ggplot(data = personal_data,
   geom_point(
     # change color and size of points
     size = 3, color = "cyan3") + 
- #ADD  geom_line(col = "cyan3") +??
   # adding labels to axes and adding title 
   labs(x = "Time of start",
        y = "Productivity rating (1-5)",
-       title = "Unclear relationship between time of day and productivity") + 
+       title = "Unclear relationship between time of day and productivity", 
+       subtitle = "2026-05-28") + 
   # apply minimal theme 
-  theme_minimal() + 
+  # removing grid, making background blank  
+  theme( panel.background = element_blank(),
+    panel.grid = element_blank(),
+    axis.ticks = element_blank()) + 
   # remove legend
   theme(legend.position = "none")
 
 ```
 
-**add subtitle, change plot??, take out grid and background**
-
 ## (b)
 
 **Figure 1: Comparison of productivity levels at different locations.** Each boxplot represents a location where I have studied, and each point represents a single study session.
 
-**Figure 2: The relationship between studuing start time and productivity.** Each point represents a single study session. **MAKE THAT ONE A LM??**
+**Figure 2: The relationship between studying start time and productivity.** Each point represents a single study session. 
 
 # Problem 3: Affective visualization
 
 ## (a)
 
-One idea I had for an affective visualization of my data is making the time of day vs productivity graph be a gradient of time of day. The points could be stars on the nighttime end and little clouds or possibly butterflies or something similar on the day end. I would probably do this as a drawing either digitally or physically.
+One idea I had for an affective visualization of my data is to create a bar graph where the x-intercept is the different locations, and the y-intercept is the average productivity rating there. I would take this and draw it by hand to make each bar a drawing of a little building that represents where I was studying. 
 
 ## (b)
 
