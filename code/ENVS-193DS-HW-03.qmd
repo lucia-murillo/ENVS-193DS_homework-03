@@ -79,7 +79,7 @@ cor.test(~ temp_c + kelp_elong,
 
 ## (d)
 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation.
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. This leads me to reject the null hypothesis that the correlation is equal to 0. 
 
 ## (e)
 
@@ -98,7 +98,7 @@ cor.test(~ temp_c + kelp_elong,
          method = "spearman")
 ```
 
-These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation.
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. This information leads me to reject the null hypothesis that rho is equal to 0. 
 
 # Problem 2: Personal Data
 
