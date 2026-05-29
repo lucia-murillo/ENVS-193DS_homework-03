@@ -223,4 +223,7 @@ This table shows the macro invertebrate community indices in urban and natural s
 
 ## (c) 
 
-One critique of this table is that the most critical part for understanding the statistical tests is very small at the bottom. However, it is in italics to draw the eye, and if it were larger, it would probably look very overwhelming. Overall, it's lack of visual clutter is nice, but the legend at the bottom may be more easily readable if it were bold. 
+The table is very simple and easy to read (no visual clutter). However, one critique is that the most critical part for understanding the statistical tests is very small at the bottom. The choice of italicizing this information does help draw the reader's eye, but it is still difficult to read and comprehend in this formatting. 
+
+## (d) 
+One recommendation would be to make the legend at the bottom bold. This would serve the same purpose as the italics of drawing the reader's eye, but make it more prominent and easily readable without adding too much visual clutter.
