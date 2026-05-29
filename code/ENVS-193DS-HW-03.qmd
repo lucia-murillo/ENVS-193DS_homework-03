@@ -3,7 +3,7 @@ title: "ENVS 193DS Homework 03"
 author: "Lucia Murillo"
 date: "2026-05-25"
 format: pdf
-editor: visual
+editor: source
 toc: true
 execute:
   message: false
@@ -62,7 +62,7 @@ ggplot(data = kelp,
 
 ### Checking assumptions:
 
-In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship since linearity is an assumption of this test. The other assumptions are met since the data is continuous and we can assume that the observations are independent. 
+In part 1b, I created a scatterplot to observe the patterns displayed in the `kelp` data. In this plot, a negative linear relationship between ocean temperature and kelp elongation is visible. This indicates that finding the Pearson's correlation would be the best way to determine the strength of this relationship since linearity is an assumption of this test. The other assumptions are met since the data is continuous and we can assume that the observations are independent.
 
 ### Running a test
 
@@ -80,11 +80,11 @@ cor.test(~ temp_c + kelp_elong,
 
 ## (d)
 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. This leads me to reject the null hypothesis that the correlation is equal to 0. 
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. This leads me to reject the null hypothesis that the correlation is equal to 0.
 
 ## (e)
 
-I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.687, p = 1.366e-05, \u03B1 = 0.05). In a time of rising temperatures worldwide, this is important to know as giant kelp is the base for many marine ecosystems.  
+I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.687, p = 1.366e-05, \u03B1 = 0.05). In a time of rising temperatures worldwide, this is important to know as giant kelp is the base for many marine ecosystems.
 
 ## (f)
 
@@ -99,7 +99,7 @@ cor.test(~ temp_c + kelp_elong,
          method = "spearman")
 ```
 
-These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. This information leads me to reject the null hypothesis that rho is equal to 0. 
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. This information leads me to reject the null hypothesis that rho is equal to 0.
 
 # Problem 2: Personal Data
 
@@ -171,22 +171,21 @@ ggplot(data = personal_data,
 
 **Figure 1: Comparison of productivity levels at different locations.** Each boxplot represents a location where I have studied, and each point represents a single study session.
 
-**Figure 2: The relationship between studying start time and productivity.** Each point represents a single study session. 
+**Figure 2: The relationship between studying start time and productivity.** Each point represents a single study session.
 
 # Problem 3: Affective visualization
 
 ## (a)
 
-One idea I had for an affective visualization of my data is to create a bar graph where the x-intercept is the different locations, and the y-intercept is the average productivity rating there. I would take this and draw it by hand to make each bar a drawing of a little building that represents where I was studying. 
+One idea I had for an affective visualization of my data is to create a bar graph where the x-intercept is the different locations, and the y-intercept is the average productivity rating there. I would take this and draw it by hand to make each bar a drawing of a little building that represents where I was studying.
 
 ## (b)
 
+![](images/clipboard-2141750472.png)
 
 ## (c)
-```{r}
-# adding photo
-knitr::include_graphics("data/3c.png")
-```
+
+![](images/clipboard-3367919428.png)
 
 ## (d)
 
