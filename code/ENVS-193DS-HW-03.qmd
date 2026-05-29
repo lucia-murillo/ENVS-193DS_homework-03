@@ -183,7 +183,6 @@ One idea I had for an affective visualization of my data is to create a bar grap
 
 ```{r}
 #| label: 3b-image
-
 # adding sketch image 
 knitr::include_graphics((here::here ("photos","3b.png")))
 ```
@@ -192,9 +191,8 @@ knitr::include_graphics((here::here ("photos","3b.png")))
 ## (c)
 
 ```{r}
-#| label: 3b-image
-
-# adding sketch image 
+#| label: 3c-image
+# adding draft image 
 knitr::include_graphics((here::here ("photos","3c.png")))
 ```
 ## (d)
@@ -213,11 +211,12 @@ The test I have selected is the Mann-Whitney U-test. The response variable is tr
 
 ## (b)
 
-The test I am focusing on does not have a figure or a table.
+The test I am focusing on does not have a figure or a table, so below I have added a different table from the paper.
 
 ```{r}
-#| label: stream-figure
-knitr::include_graphics((here::here ("data","stream-screenshot.png")))
+#| label: stream-table
+# adding stream image
+knitr::include_graphics((here::here ("photos","stream-screenshot.png")))
 ```
 
-This table shows the macro invertebrate community indices in urban and natural streams in the Santa Monica Mountains and Simi Hills, CA in 2001. It displays rows such as taxonomic richness and percent EPT (aquatic insect orders Ephemeroptera, Plecoptera, and Trichoptera) invertebrates, and compares urban and natural streams. Data points marked with different superscripts identify significant differences between the two at different p-values, bonferroni comparison, and other\*\*.
+This table shows the macro invertebrate community indices in urban and natural streams in the Santa Monica Mountains and Simi Hills, CA in 2001. It displays rows such as taxonomic richness and percent EPT (aquatic insect orders Ephemeroptera, Plecoptera, and Trichoptera) invertebrates, and compares urban and natural streams. Data points marked with different superscripts identify significant differences between the two at different p-values, bonferroni comparison, and others. Once the reader looks at the legend at the bottom, the table clearly represents the statistical tests described in the paper. 
