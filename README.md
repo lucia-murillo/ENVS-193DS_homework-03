@@ -9,4 +9,4 @@ There are three folders, a `code` folder, a `data` folder, and a `photos` folder
 In the `code` folder, there is a file called `ENVS-193DS-HW-03.qmd`, which contains all of the analysis. 
 
 ## Rendered output 
-link to rendered.html 
+The rendered output for the code in this repository is [here](https://lucia-murillo.github.io/ENVS-193DS_homework-03/code/ENVS-193DS-HW-03.pdf) 
