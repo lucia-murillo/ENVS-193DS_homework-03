@@ -80,11 +80,11 @@ cor.test(~ temp_c + kelp_elong,
 
 ## (d)
 
-To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, \u03B1 = 0.05 ) relationship between ocean temperature and kelp elongation. This leads me to reject the null hypothesis that the correlation is equal to 0.
+To evaluate the strength of the relationship between ocean water temperature and kelp elongation, I used a Pearson's correlation test because the data is linear. I found a moderate negative (Pearson's r = -0.687, t(30) = -5.19, p = 1.366e-05, $\alpha$ = 0.05 ) relationship between ocean temperature and kelp elongation. This leads me to reject the null hypothesis that the correlation is equal to 0.
 
 ## (e)
 
-I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.687, p = 1.366e-05, \u03B1 = 0.05). In a time of rising temperatures worldwide, this is important to know as giant kelp is the base for many marine ecosystems.
+I found that kelp elongation rates tend to decrease as temperatures increase. There is a moderate negative relationship between these two variables (Pearson's r = -0.687, p = 1.366e-05, $\alpha$ = 0.05). In a time of rising temperatures worldwide, this is important to know as giant kelp is the base for many marine ecosystems.
 
 ## (f)
 
@@ -99,7 +99,7 @@ cor.test(~ temp_c + kelp_elong,
          method = "spearman")
 ```
 
-These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, \u03B1 = 0.05) between temperature and kelp elongation. This information leads me to reject the null hypothesis that rho is equal to 0.
+These two tests have led me to the same interpretation of results. In the Spearman correlation test, I found a moderate negative relationship (Spearmans $\rho$ = 0.689, S = 9216.1, p = 1.29e-05, $\alpha$ = 0.05) between temperature and kelp elongation. This information leads me to reject the null hypothesis that rho is equal to 0.
 
 # Problem 2: Personal Data
 
@@ -137,8 +137,6 @@ ggplot(data = personal_data,
 
 
 ```
-
-**add subtitle, wrap x-axis labels?, take out grids and background**
 
 ```{r}
 #| label: personal-scatterplot
