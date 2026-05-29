@@ -220,3 +220,7 @@ knitr::include_graphics((here::here ("photos","stream-screenshot.png")))
 ```
 
 This table shows the macro invertebrate community indices in urban and natural streams in the Santa Monica Mountains and Simi Hills, CA in 2001. It displays rows such as taxonomic richness and percent EPT (aquatic insect orders Ephemeroptera, Plecoptera, and Trichoptera) invertebrates, and compares urban and natural streams. Data points marked with different superscripts identify significant differences between the two at different p-values, bonferroni comparison, and others. Once the reader looks at the legend at the bottom, the table clearly represents the statistical tests described in the paper. 
+
+## (c) 
+
+One critique of this table is that the most critical part for understanding the statistical tests is very small at the bottom. However, it is in italics to draw the eye, and if it were larger, it would probably look very overwhelming. Overall, it's lack of visual clutter is nice, but the legend at the bottom may be more easily readable if it were bold. 
